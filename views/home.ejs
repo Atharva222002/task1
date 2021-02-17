@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  width: 100vh;
+}
+#home::before{
+    background: url("../images/dmitry-demidko-eBWzFKahEaU-unsplash.jpg") no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#home{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin:0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.example_e {
+border: none;
+background: #404040;
+width: 20em;
+color: #ffffff !important;
+font-weight: 100;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+}
+.example_e:hover {
+color: #404040 !important;
+font-weight: 700 !important;
+letter-spacing: 3px;
+background-color: rgb(243, 173, 146);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.3s ease 0s;
+}
+
+.main{
+  position: absolute;
+  top: 6%;
+  left: 10%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(240, 233, 130, 0.966);
+  border-radius: 15px;
+  box-shadow: 0 0 20px black;
+  height: 88%;
+  width: 80%;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 45%;
+  /* background-color: blue; */
+  height: 100%;
+}
+.right{
+  min-width: 55%;
+  /* background-color: blueviolet; */
+  height: 100%;
+}
+#piggy{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 2px 2px;
+  top: 0;
+  left: 100;
+  opacity: 1;
+}
+
+.button_cont{
+  margin: 1em;
+  font-size: 1.8em;
+}
+
+a{
+  text-decoration: none;
+}
+.info{
+  position: fixed;
+  top: 0.2em;
+  left: 0.3em;
+  z-index: 2;
+  color: rgb(255, 0, 242);
+  font-size: 1.4em;
+  font-weight: bolder;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+  </style>
+  <title>safeBank</title>
+</head>
+
+<body>
+  <div id="home">
+    <div class="info">
+    <img src="https://img.icons8.com/emoji/48/000000/bank-emoji.png"/>
+    <span>safeBank</span></div>
+    <div class="main">
+      <div class="left">
+        <div class="button_cont" align="center"><a class="example_e" href="/profile/<%= user._id%>">Profile</div></a> 
+        <div class="button_cont" align="center"><a class="example_e" href="register">Create Account</div></a> 
+        <div class="button_cont" align="center"><a class="example_e" href="customers">customers</div></a> 
+        <div class="button_cont" align="center"><a class="example_e" href="/history/<%= user._id%>">Transaction History</div></a> 
+      </div>
+      <div class="right">
+        <img src="../images/michael-longmire-RhBVoJnRqVg-unsplash-removebg-preview.png" alt="" id="piggy">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

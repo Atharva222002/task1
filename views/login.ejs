@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+a,input[type=submit] {
+  margin: 4px 2px;
+  height: 1.4em;
+  border:none;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    background-color:  rgb(255, 187, 0);
+    transition: all 0.1s ease-in-out;
+      font-family: "Montserrat", sans-serif;
+      font-size: 32px;
+      font-weight: semibold;
+      border-radius: 5px;
+      box-shadow: -6px -6px 10px rgb(155, 102, 4),
+        6px 6px 10px rgba(122, 94, 2, 0.815);
+      color: #6f6cde;
+    }
+    a:hover,[type=submit]:hover {
+        opacity: 0.3;
+        box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+          6px 6px 10px rgba(0, 0, 0, 0.2);
+      }
+      a:active,input[type=submit]:active {
+        opacity: 1;
+        box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+          inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+        color: #79e3b6;
+      }
+
+
+body{
+  height: 100vh;
+  width: 100vh;
+}
+#home::before{
+    background: url("../images/dmitry-demidko-eBWzFKahEaU-unsplash.jpg") no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#home{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin:0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.example_e {
+border: none;
+background: #404040;
+width: 20em;
+color: #ffffff !important;
+font-weight: 100;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+}
+.example_e:hover {
+color: #404040 !important;
+font-weight: 700 !important;
+letter-spacing: 3px;
+background-color: rgb(243, 173, 146);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.3s ease 0s;
+}
+
+.main{
+  position: absolute;
+  top: 6%;
+  left: 10%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(240, 233, 130, 0.966);
+  border-radius: 15px;
+  box-shadow: 0 0 20px black;
+  height: 88%;
+  width: 80%;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 45%;
+  /* background-color: blue; */
+  height: 100%;
+}
+.right{
+  min-width: 55%;
+  /* background-color: blueviolet; */
+  height: 100%;
+}
+#piggy{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 2px 2px;
+  top: 0;
+  left: 100;
+  opacity: 1;
+}
+
+.button_cont{
+  margin: 1em;
+  font-size: 1.8em;
+}
+
+a{
+  display: block;
+  margin-top: 2px;
+  text-decoration: none !important;
+  width: 100%;
+}
+
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  height: 70%;
+}
+input[type=email],input[type=password]{
+  display: block;
+  margin: 2em auto;
+  border-radius: 2px;
+  height: 3em;
+  width: 20em;
+  padding: 0px 5px;
+  background-color: white;
+  background-image: url('/images/icons8-email-50.png');
+  background-size: 25px 25px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  outline: none;
+}
+input[type=password]{
+  background-image: url('/images/icons8-password-50.png');
+}
+input[type=email]:focus,input[type=password]:focus{
+  border:2px solid red;
+}
+P{
+  font-size: 3em;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.info{
+  position: fixed;
+  top: 0.2em;
+  left: 0.3em;
+  z-index: 2;
+  color: rgb(255, 0, 242);
+  font-size: 1.4em;
+  font-weight: bolder;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+  </style>
+  <title>safeBank</title>
+</head>
+
+<body>
+  <div id="home">
+    <div class="info">
+      <img src="https://img.icons8.com/emoji/48/000000/bank-emoji.png"/>
+      <span>safeBank</span></div>
+    <div class="main">
+      <div class="left">
+        <p>LOGIN</p>
+        <div class="form">
+          <form  action = "/login"  method="POST">
+             <input id="email" type="email" placeholder="Email" name="username"/>
+            <input id="myInput" type="password" placeholder="Password" name="password"/>
+            <div class="button"><input type="submit" name="submit" value="LOGIN"/></div>
+            <a href="register">SIGNUP</a>
+          </form>
+          
+              
+        </div>
+      </div>
+      <div class="right">
+        <img src="../images/michael-longmire-RhBVoJnRqVg-unsplash-removebg-preview.png" alt="" id="piggy">
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+</html>
+
